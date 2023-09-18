@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'poppins', Arial, sans-serif;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(196, 97, 175, 1) 35%), url(1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0);
+            padding: 10px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 35px;
+            font-weight: 700;
+            font-family: 'poppins', Arial, sans-serif;
+            margin: 10px;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 20px;
+            flex-grow: 1;
+        }
+
+        .menu ul{
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .menu ul:hover{
+            color: #ff7200;
+            transition-duration: 0ms;
+        }
+
+        .menu ul li{
+            margin: 0 20px;
+            
+        }
+        .menu ul li:hover{
+            color: #ff7200;
+            transition-duration: 0ms;
+        }
+
+        .menu ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-family: 'poppins', Arial, sans-serif;
+            transition: color 0.4s ease-in-out;
+        }
+        .menu ul li a:hover{
+            color: #ff7200;
+            transition-duration: 0ms;
+        }
+
+
+        .form-input {
+            width: 200px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid #ff7200;
+            margin-top: 13px;
+            color: #fff;
+            border-right: none;
+            font-size: 16px;
+            float: left;
+            padding: 10px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            font-family: 'Times New Roman';
+        }
+
+        .register-btn {
+            width: 100px;
+            height: 40px;
+            background: #ff7200;
+            border: 2px solid #ff7200;
+            color: #ffffff;
+            font-family: 'poppins', Arial, sans-serif;
+            font-size: 20px;
+            border-radius: 10%;
+            transition: 0.2s ease;
+            cursor: pointer;
+        }
+
+        .register-btn:hover {
+            background-color: #ff4343;
+        }
+
+        .register-btn:focus {
+            outline: none;
+        }
+
+        .form-input:focus {
+            outline: none;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 4%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin: 2px auto;
+            margin-bottom: auto;
+        }
+
+        .registration-form {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .form-input {
+            width: 100%;
+            max-width: 400px;
+            height: 35px;
+            background: transparent;
+            border: 1px solid #ccc;
+            color: #333;
+            font-size: 15px;
+            font-family: 'poppins', Arial, sans-serif;
+            letter-spacing: 1px;
+            margin: 10px auto;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .form-input:focus {
+            outline: none;
+        }
+
+        .search-container {
+            margin-left: auto;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            margin-top: 13px;
+        }
+
+        .search-btn {
+            width: 100%;
+            max-width: 250px;
+            height: 35px;
+            background: #ff7200;
+            border: none;
+            margin-bottom: 0px;
+            font-family: 'poppins', Arial, sans-serif;
+            font-size: 15px;
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 10%;
+            cursor: pointer;
+            color: #fff;
+            transition: background-color 0.4s ease;
+        }
+
+        .search-form-input {
+            width: 100%;
+            max-width: 400px;
+            height: 35px;
+            background: #ffffff;
+            border: 1px solid #ccc;
+            color: #333;
+            font-size: 15px;
+            font-family: 'poppins', Arial, sans-serif;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            letter-spacing: 1px;
+            margin: 10px auto;
+            padding: 5px;
+        }
+
+        .search-btn:hover {
+            background-color: #ff4343;
+        }
+
+        .link {
+            font-family: 'poppins', Arial, sans-serif;
+            font-size: 17px;
+            padding-top: 20px;
+        }
+
+        .link a {
+            font-family: 'poppins', Arial, sans-serif;
+            text-decoration: none;
+            color: #ff7200;
+            font-weight: bold;
+        }
+
+        .icons a {
+            text-decoration: none;
+            color: #999;
+        }
+
+        .icons ion-icon {
+            color: #333;
+            font-size: 30px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .icons ion-icon:hover {
+            color: #ff7200;
+        }
+        @media screen and (max-width: 768px) {
+            .logo {
+                font-size: 30px;
+            }
+            .menu ul li {
+                margin: 0 10px;
+            }
+            .search-container {
+                margin-right: 10px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 25px;
+            }
+            .menu ul {
+                flex-direction: column;
+            }
+            .menu ul li {
+                margin: 5px 0;
+            }
+            .search-container {
+                margin: 10px auto;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">HOSPITALx</div>
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="search-container">
+                <input class="search-form-input" type="search" name="" placeholder="Type To text">
+                <a href="#"><button class="search-btn">Search</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="registration-form">
+            <h2>Registration</h2>
+            <form>
+                <input class="form-input" type="text" name="doctor_id" placeholder="Doctor ID">
+                <input class="form-input" type="text" name="name" placeholder="Name">
+                <input class="form-input" type="email" name="email" placeholder="Email ID">
+                <input class="form-input" type="text" name="department" placeholder="Department">
+                <input class="form-input" type="password" name="password" placeholder="Password">
+                <input class="form-input" type="password" name="confirm_password" placeholder="Confirm Password">
+                <button class="register-btn" type="submit">Register</button>
+            </form>
+            <p class="link">Already have an account? <a href="#">Login</a></p>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
